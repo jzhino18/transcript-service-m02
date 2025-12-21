@@ -1,0 +1,20 @@
+{
+  "name": "transcript-service",
+  "version": "1.0.0",
+  "description": "Transcript Service",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --coverage",
+    "vitest": "vitest run  --coverage --watch=false",
+    "lint": "eslint src/**/*.ts",
+    "stryker": "stryker run",
+    "pack": "npm-pack-zip  --exclude *.zip",
+    "release": "npm-pack-zip --exclude *.zip --exclude module-02.test.ts --output foo.zip"
+  },
+  "author": "Mitch Wand",
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  }
+}
