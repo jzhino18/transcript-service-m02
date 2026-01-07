@@ -4,10 +4,7 @@
   "description": "Transcript Service",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "watch": "tsc --watch",
-    "check": "tsc --noEmit",
-    "lint": "eslint .",
+  "scripts": {    "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.ts",
     "test": "vitest run --coverage",
