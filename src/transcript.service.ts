@@ -53,6 +53,18 @@ export class TranscriptDB implements TranscriptService {
    *
    * @param id - the id to look up
    * @returns the transcript for this ID
+   * 
+   * ESLint often flags this as:
+   * no-else-return (preferred) or
+   * no-useless-else
+   * 
+   * Because after throw, control flow never continues, so the else block is redundant.
+   * 
+   * if (ret === undefined) {
+   * throw new Error('unknown ID');
+    }
+    return ret;
+   * 
    */
   getTranscript(id: StudentID): Transcript {
     const ret: Transcript | undefined = this._transcripts.find(t => t.student.studentID === id);
@@ -62,6 +74,8 @@ export class TranscriptDB implements TranscriptService {
       return ret;
     }
   }
+
+
 
   deleteStudent(id: StudentID): void {
     throw new Error('not implemented yet');
